@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="./css/webreset.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    
 </head>
 <body>
-    
+    <header>
+        <ul>
+            <li><img src="./img/templogo.png" alt="Logo" /></li>
+            <li>Games</li>
+            <li>Consoles</li>
+            <li>Collectables</li>
+            <li>Catalogue</li>
+            <li>Sign In</li>
+            <li><input type="search" placeholder="Search..." /></li>
+        </ul>
+    </header>
 </body>
 </html>
