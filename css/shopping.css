@@ -1,0 +1,51 @@
+/*Video Game of The Week Section*/
+
+/* * vgow class (stands for - you guessed it - Video Game of the Week*/
+
+section.vgow {
+    display:flex;
+    display:-webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+
+    background-color: #637463;
+    max-width: 70%;
+    margin: .2rem;
+    padding:.5rem;
+
+    border-radius: 10px;
+}
+
+section.vgow h1 {
+    text-indent: 10px;
+    font-style:italic;
+}
+
+/*Sections of Video Game of the Week Box*/
+
+section.vgow div[class^="col-"] {
+    display:flex;
+    display:-webkit-flex;
+
+    flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+    border: 1px solid black;
+}
+
+section.vgow div.gameMedia {
+    margin: 0px 2px;
+    padding: 5px;
+}
+
+section.vgow img {
+    width: 16.3rem;
+}
+
+section.vgow video {
+    width:30rem;
+    animation-play-state:paused;
+}
+
+/*section.vgow:hover {
+
+}*/

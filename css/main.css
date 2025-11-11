@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6, li {
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 p {
@@ -50,7 +51,6 @@ header nav.horizontal ul.main li {
     -webkit-flex: 1 2 15vw;
     width: 15%;
     text-align:center;
-    font-size: clamp(1.2rem, 2vw, 2rem);
 
     display:flex;
     display:-webkit-flex;

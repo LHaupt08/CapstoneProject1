@@ -9,6 +9,7 @@
 
     <link href="../css/webreset.css" rel="stylesheet" />
     <link href="../css/main.css" rel="stylesheet" />
+    <link href="../css/form.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -31,9 +32,9 @@
 
         </nav>
 
-    </header>
+    </header><br />
 <section>
-<h1>Payment Information</h1>
+
 <form id="Customerinfo" method="post">
     <fieldset id="custInfo">
         <legend>Customer Inofrmation</legend>
@@ -49,18 +50,18 @@
         </div><br />
         <div class="formRow">
             <label for="email">E-mail*</label>
-            <input name="custMail" id="mail" type="email" required/>
+            <input name="custMail" id="mail" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
         </div><br />
         <div class="formRow">
             <label for="phone">Phone</label>
-            <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required/>
+            <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
         </div><br />
         <div class="formRow">
-            <label for="address">Street Address</label>
+            <label for="address">Street Address*</label>
             <input name="custAddress" id="address" type="text" required/>
         </div><br />
         <div class="formRow">
-            <label for="state">State</label>
+            <label for="state">State*</label>
             <input name="custState" id="state" type="text" list="stateType" required/>
             <datalist id="stateType">
             <option value="MO"></option>
@@ -118,16 +119,17 @@
             </datalist>
         </div><br />
         <div class="formRow">
-            <label for="zip">Zip</label>
-            <input name="custZip" id="zip" type="text" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
+            <label for="city">City*</label>
+            <input name="custCity" id="city" type="text" required/>
         </div><br />
         <div class="formRow">
-            <label for="city">City</label>
-            <input name="custCity" id="city" type="text" required/>
-    </fieldset>
-    <h1>Product Information</h1>
-<form id="Productinfo" method="post">
+            <label for="zip">Zip</label>
+            <input name="custZip" id="zip" type="number" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
+        </div><br />
+    </fieldset><br />
+
     <fieldset id="itemInfo">
+        <legend>Product Information</legend>
         <div class="formRow">
             <label for="item">Item</label>
             
@@ -144,14 +146,42 @@
             10
         </div><br />
         <div class="formRow">
-            <label for="Delivery Preference">Delivery Preference</label><br />
-            <label for="porch">Porch</label>
-            <input name="delPorch" id="delporch" type="radio">
-            <label for="mailbox">Mail Box</label>
-            <input name="delmail" id="delmail" type="radio">
-            <label for="store">Pick-up at Store</label>
-            <input name="delstore" id="delstore" type="radio">
-        </fieldset>
+            <label for="delivery">Delivery Preference</label>
+            
+            <select name="DeliveryType" id="delivery">
+            <option value="Porch">Porch</option>
+            <option value="Mail Box">Mail Box</option>
+            <option value="Pickup">Pick-up at Store</option>
+            </select>
+        </div><br />
+        </fieldset><br />
+        <fieldset>
+            <legend>Payment Information</legend>
+        <div class="formRow">
+            <label for="name">Card Holder's Name</label>
+            <input name="cardName" id="name" type="text" placeholder="Jane Doe" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="card">Card Number</label>
+            <input name="cardNum" id="number" type="number" placeholder="1234 1234 1234 1234" maxlength="16" required />
+        </div><br />
+        <div class="formRow">
+            <label for="cvv">CVV</label>
+            <input name="cvvNum" id="code" type="number" placeholder="123" maxlength="3" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="exp">Expiration Date</label>
+            <input name="expDate" id="expdate" type="date" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="address">Street Address</label>
+            <input name="cardAddress" id="address" type="text" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="zip">Zip</label>
+            <input name="cardZip" id="zip" type="number" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
+        </div><br />
+
 </section>
 
 </body>
