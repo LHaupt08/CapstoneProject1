@@ -8,32 +8,150 @@
     <title>Payment</title>
 
     <link href="../css/webreset.css" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
 </head>
 
 <body>
     
     <header>
 
-        <ul>
-            
-            <li> <img src="./img/templogo.png" alt="Logo" /> </li>
-            <li>Games</li>
-            <li>Consoles</li>
-            <li>Collectables</li>
-            <li>Catalogue</li>
-            <li>Sign In</li>
-            <li><input type="search" placeholder="Search..."/></li>
+        <nav class="horizontal">
 
-        </ul>
+            <ul class="main">
+                
+                <li> <a href="../index.html"><img src="../img/templogo.png" alt="Logo" /></a></li>
+                <li><a href="#">Games</a>
+                <li><a href="#">Consoles</a></li>
+                <li><a href="#">Collectables</a></li>
+                <li><a href="../html/catalog.html">Catalogue</a></li>
+                <li><a href="../html/payment.html">Sign In</a></li>
+                <li><input type="search" placeholder="Search..."/><input type="submit"/></li>
+
+            </ul>
+
+        </nav>
 
     </header>
 <section>
 <h1>Payment Information</h1>
-<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis sit provident mollitia saepe asperiores vitae, eligendi quidem quas iusto, accusantium nihil aliquid voluptatum aliquam autem cupiditate beatae unde? Enim, eius.</p>
-<form id="payinfo" method="post">
-
-
+<form id="Customerinfo" method="post">
+    <fieldset id="custInfo">
+        <legend>Customer Inofrmation</legend>
+        <div class="formRow">
+            <label for="firstname">First name*</label>
+            <input name="custFirst" id="firstname"
+            type="text" placeholder="first name" required/>
+        </div><br />
+        <div class="formRow">
+                <label for="lastname">Last name*</label>
+                <input name="custLast" id="lastname"
+                type="text" placeholder="last name" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="email">E-mail*</label>
+            <input name="custMail" id="mail" type="email" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="phone">Phone</label>
+            <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="address">Street Address</label>
+            <input name="custAddress" id="address" type="text" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="state">State</label>
+            <input name="custState" id="state" type="text" list="stateType" required/>
+            <datalist id="stateType">
+            <option value="MO"></option>
+            <option value="WA"></option>
+            <option value="OR"></option>
+            <option value="CA"></option>
+            <option value="NV"></option>
+            <option value="AZ"></option>
+            <option value="ID"></option>
+            <option value="MT"></option>
+            <option value="WY"></option>
+            <option value="CO"></option>
+            <option value="UT"></option>
+            <option value="CO"></option>
+            <option value="NM"></option>
+            <option value="TX"></option>
+            <option value="HI"></option>
+            <option value="AK"></option>
+            <option value="ND"></option>
+            <option value="SD"></option>
+            <option value="NE"></option>
+            <option value="KS"></option>
+            <option value="OK"></option>
+            <option value="LA"></option>
+            <option value="AR"></option>
+            <option value="IA"></option>
+            <option value="MN"></option>
+            <option value="WI"></option>
+            <option value="IL"></option>
+            <option value="MI"></option>
+            <option value="IN"></option>
+            <option value="KY"></option>
+            <option value="TN"></option>
+            <option value="MS"></option>
+            <option value="AL"></option>
+            <option value="GA"></option>
+            <option value="FL"></option>
+            <option value="SC"></option>
+            <option value="NC"></option>
+            <option value="VA"></option>
+            <option value="WV"></option>
+            <option value="OH"></option>
+            <option value="PA"></option>
+            <option value="NY"></option>
+            <option value="VT"></option>
+            <option value="NH"></option>
+            <option value="ME"></option>
+            <option value="MA"></option>
+            <option value="RI"></option>
+            <option value="CT"></option>
+            <option value="NJ"></option>
+            <option value="DE"></option>
+            <option value="MD"></option>
+            <option value="DC"></option>
+            </datalist>
+        </div><br />
+        <div class="formRow">
+            <label for="zip">Zip</label>
+            <input name="custZip" id="zip" type="text" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
+        </div><br />
+        <div class="formRow">
+            <label for="city">City</label>
+            <input name="custCity" id="city" type="text" required/>
+    </fieldset>
+    <h1>Product Information</h1>
+<form id="Productinfo" method="post">
+    <fieldset id="itemInfo">
+        <div class="formRow">
+            <label for="item">Item</label>
+            
+            <select name="itemType" id="item">
+            <option value="Game">Game</option>
+            <option value="Console">Console</option>
+            <option value="Collectable">Collectable</option>
+            </select>
+        </div><br />
+        <div class="formRow">
+            <label for="quantity">Quantity</label><br />
+            1
+            <input name="itemQuan" id="quantity" type="range" value="10" step="1" min="1" max="10"/>
+            10
+        </div><br />
+        <div class="formRow">
+            <label for="Delivery Preference">Delivery Preference</label><br />
+            <label for="porch">Porch</label>
+            <input name="delPorch" id="delporch" type="radio">
+            <label for="mailbox">Mail Box</label>
+            <input name="delmail" id="delmail" type="radio">
+            <label for="store">Pick-up at Store</label>
+            <input name="delstore" id="delstore" type="radio">
+        </fieldset>
 </section>
 
 </body>
