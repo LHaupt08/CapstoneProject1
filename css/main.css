@@ -16,6 +16,7 @@ body {
 header {
     background-color: #637463;
     display:block;
+    border-radius:5px;
 }
 
 /*Font Setup*/
@@ -96,6 +97,6 @@ header nav.horizontal ul.main li:first-of-type > a::after {
 header nav.horizontal ul.main li img {
     flex: 1 2 100%;
     -webkit-flex: 1 2 100%;
-    max-width:50%;
+    max-width:100%;
 }
 
