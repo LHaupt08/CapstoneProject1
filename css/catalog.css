@@ -1,7 +1,7 @@
 @charset "utf-8";
 table, td {
-            background-color: white;
-            color: black;
+            background-color: #637463;
+            color: white;
             border: solid 1px black;
             font-family: "Monserrat", sans-serif;
         }
@@ -11,7 +11,4 @@ table, td {
             margin-left: 5%;
             margin-top: 5%;
             margin-bottom: 5%;
-        }
-        footer {
-            background-color: #637463;
         }

@@ -52,8 +52,8 @@ section.vgow div[class^="col-"] {
     -webkit-flex-flow: column nowrap;
 }
 
-section div.col-1 {width: 65%; margin-right:.3rem;}
-section div.col-2 {width:35%;}
+section div.col-1 {flex: 1 2 900px;}
+section div.col-2 {flex: 1 2 400px;}
 
 section.vgow div.gameMedia {
     height:100%;
@@ -68,7 +68,7 @@ section.vgow div.gameMedia {
 }
 
 section.vgow img {
-    width: 30%;
+    width: 32.5%;
 }
 
 section.vgow video {
@@ -85,34 +85,53 @@ audio {
 
 section.recents {
     background-color: #637463;
-    display: block;
+    display: flex;
+    display:-webkit-flex;
+    flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
     width: 100%;
     margin: .2rem;
     padding:.5rem;
     border-radius: 10px;
 }
 
-section.recents > img#silent {
+div.imgbox {
+    display: flex;
+    display:-webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow:row nowrap;
+    width:100%;
+}
+
+div.img {
+    flex: 1 2 auto;
+    -webkit-flex: 1 2 auto;
+    display: flex;
+    display:-webkit-flex;
+    justify-content:center;
+}
+
+div.img > img#silent {
     width: auto;
-    height: 300px;
-    padding-right: 32px;
+    height: 18.75rem;
+    
     
 }
-section.recents > img#ghost {
+div.img > img#ghost {
     width: auto;
-    height: 300px;
-    padding-right: 32px;
+    height: 18.75rem;
+    
 }
 
-section.recents > img#little {
+div.img > img#little {
 width: auto;
-height: 300px;
-padding-right: 32px;
+height: 18.75rem;
+
 }
 
-section.recents > img#cod {
+div.img > img#cod {
     width: auto;
-    height: 300px;
+    height: 18.75rem;
     
 }
     
@@ -126,8 +145,50 @@ section.popular {
 
 section.popular marquee{
     position:fixed;
-    text-align:center;
 
     background:linear-gradient(180deg,black, #637463 4%);
     border-radius:20px;
+}
+
+marquee div.item {
+    display:flex;
+    display:-webkit-flex;
+    flex-flow: row nowrap;
+    -webkit-flex-flow:row nowrap;
+    margin:10px 0px;
+    text-align:center;
+}
+
+marquee div.item:first-of-type h1{
+    width:100%;
+}
+
+marquee img{
+    width: min(9.75rem,40%);
+}
+
+dt {flex: 1 2 200px; -webkit-flex: 1 2 180px;}
+dd {display:flex; display:-webkit-flex; flex: 1 2 200px; -webkit-flex: 1 2 200px; justify-content:center; align-items:center;}
+
+/* For Screens 0 to 480px */
+@media only screen and (max-width: 768px) {
+     section.vgow {
+        flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
+        
+    }
+
+    section div.col-1 {flex: 1 2 200px;}
+    section div.col-2 {flex: 1 2 400px;}
+
+    div.img > img#ghost {
+        
+    }
+}
+
+
+
+/*Footer*/
+footer {
+    width: 100%;
 }

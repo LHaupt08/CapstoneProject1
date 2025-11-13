@@ -24,14 +24,14 @@ header {
 
 /*Font Setup*/
 
-h1, h2, h3, h4, h5, h6, li {
+h1, h2, h3, h4, h5, h6, li, dd {
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
-p, marquee {
+p, dd.lower{
     font-family: "Monserrat", sans-serif;
     word-spacing: .1rem;
     line-height: 1.2rem;
@@ -103,4 +103,10 @@ nav.horizontal ul.main li img {
     flex: 1 2 100%;
     -webkit-flex: 1 2 100%;
     max-width:100%;
+}
+
+footer {
+    background-color: #637463;
+    text-align:center;
+    border-radius: 5px;
 }
