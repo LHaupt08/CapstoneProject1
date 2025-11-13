@@ -31,10 +31,10 @@ h1, h2, h3, h4, h5, h6, li {
     font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
-p {
+p, marquee {
     font-family: "Monserrat", sans-serif;
-    margin-top: 60px;
-    
+    word-spacing: .1rem;
+    line-height: 1.2rem;
 }
 
 /*Header and Navigation*/
