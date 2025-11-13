@@ -20,9 +20,9 @@
 It would offer a place to endulge in their hobbies at an affordable cost. It could also introduce new interests.
 
 ## Assigning Tasks
-Elizanna: Video/Audio
-Lukas: Header
-Dominic: Picking out items for catalogue
+Elizanna: Video/Audio, Shopping Form, "Recent Games"
+Lukas: Header, Logo, "Video Game of the week", "Popular Games"
+Dominic: Picking out items for catalogue, Catalogue, Footer
 
 ## Website Layout
 

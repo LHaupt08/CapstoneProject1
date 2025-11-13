@@ -16,7 +16,11 @@ body {
 header {
     background-color: #637463;
     display:block;
+    border-radius:5px;
+    position:fixed;
 }
+
+
 
 /*Font Setup*/
 
@@ -24,15 +28,19 @@ h1, h2, h3, h4, h5, h6, li {
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
-p {
+p, marquee {
     font-family: "Monserrat", sans-serif;
+    word-spacing: .1rem;
+    line-height: 1.2rem;
 }
 
 /*Header and Navigation*/
 
-header nav.horizontal ul.main {
+nav.horizontal ul.main {
+    max-width:100%;
     display:flex;
     display:-webkit-flex;
 
@@ -44,33 +52,55 @@ header nav.horizontal ul.main {
     align-items:center;
 }
 
-header nav.horizontal ul.main li {
-    flex-basis: 1 2 15vw;
-    -webkit-flex-basis: 1 2 15vw;
+nav.horizontal ul.main li {
+    flex: 1 2 15vw;
+    -webkit-flex: 1 2 15vw;
     width: 15%;
     text-align:center;
-    font-size: clamp(1.2rem, 2vw, 2rem);
 
     display:flex;
     display:-webkit-flex;
     justify-content:center;
+    align-items:center;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
 }
 
-header nav.horizontal ul.main li::after {
+nav.horizontal ul.main li input {
+    flex: 1 1 200px;
+    -webkit-flex: 1 1 200px;
+    margin: 0px 8px;
+}
+
+nav.horizontal ul.main li a {
+    display:flex;
+    display:-webkit-flex;
+    justify-content:center;
+    align-items:center;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+
+ul.main li a:link, ul.main li a:visited {
+    color:white;
+}
+
+nav.horizontal ul.main li a::after {
     margin-top: 0.1875rem;
     content:' \25B8';
 }
 
-header nav.horizontal ul.main li a:hover::after {
+nav.horizontal ul.main li a:hover::after {
     content:' \25BE';
 }
 
-header nav.horizontal ul.main li img {
-    flex-basis: 1 2 100%;
-    max-width:50%;
+nav.horizontal ul.main li:first-of-type > a::after {
+    margin-top:0px;
+    content:none;
 }
 
-/*Nav Subclasses*/
-
+nav.horizontal ul.main li img {
+    flex: 1 2 100%;
+    -webkit-flex: 1 2 100%;
+    max-width:100%;
+}

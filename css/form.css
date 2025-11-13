@@ -1,0 +1,24 @@
+/* Form layout */
+
+form#Customerinfo {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+   
+    
+}
+form#Customerinfo > fieldset {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    
+}
+form#Customerinfo > fieldset > legend {
+    background-color: darkred;
+    
+}
+
+div.formRow {
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    
+    
+}
