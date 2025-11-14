@@ -84,8 +84,12 @@ audio {
     width: 80%;
 }
 
-/* Recent Video Games styles section */
+video, audio {
+    z-index:1;
+}
 
+/* Recent Video Games styles section */
+/*This section adds the styles and flexes to the made sections from the index page */
 section.recents {
     background-color: #637463;
     display: flex;
@@ -114,8 +118,6 @@ div.img {
     justify-content:center;
 }
 
-/*! ELABORATE ON THE CHANGE YOU (Lukas) MADE BELOW*/
-
 div.img > img {
     width: auto;
     height: 18.75rem; }
@@ -129,12 +131,12 @@ section.popular {
 }
 
 section.popular marquee{
-    position:fixed;
+    position: fixed;
 
     background:linear-gradient(180deg,black, #637463 4%);
     border-radius:20px;
 }
-
+/* lines 136-155 are from Lukas editing and adding flexes to the Marquee */
 marquee div.item {
     display:flex;
     display:-webkit-flex;
@@ -160,7 +162,13 @@ dt {flex: 1 2 200px; -webkit-flex: 1 2 180px;}
 dd {display:flex; display:-webkit-flex; flex: 1 2 200px; -webkit-flex: 1 2 200px; justify-content:center; align-items:center;}
 
 /* For Screens 0 to 480px */
+/* This section was made by Lukas and Elizanna to get the index to be responsive to mobile screens */
 @media only screen and (max-width: 768px) {
+
+    div.notpopular {
+        width: 100%;
+    }
+
      section.vgow {
         flex-flow: column nowrap;
         -webkit-flex-flow: column nowrap;
@@ -170,9 +178,18 @@ dd {display:flex; display:-webkit-flex; flex: 1 2 200px; -webkit-flex: 1 2 200px
     section div.col-1 {flex: 1 2 200px;}
     section div.col-2 {flex: 1 2 400px;}
 
-    /*div.img > img {
-         
-    }*/
+    div.imgbox{
+      flex-flow: column nowrap;
+      -webkit-flex-flow:column nowrap;
+      align-items:center;
+
+    flex: 3 1 19rem;
+    -webkit-flex: 3 1 19rem;
+    }
+
+    section.popular {
+        display:none;
+    }
 }
 
 

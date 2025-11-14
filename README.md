@@ -28,13 +28,13 @@ Dominic: Picking out items for catalogue, Catalogue, Footer
 
 ## CSS Themes
 ### Fonts and Colors
-- Font for Headings: (Name and Google fonts link)
-- Font for Paragraphs: (EXAMPLE: Roboto, https://fonts.google.com/specimen/Roboto)
-- Background Color: (paste hex code or rgb value here)
-- Font Color: (EXAMPLE: #FFFFFF)
-- Contrast Ratio: (needs to be 4.5 or higher)
-- Include additional colors such as foreground, or different colors for Headings(1-6), Paragraphs, Anchors/Links, etc.
-- Paragraph Font Size (use em or rem, not pixels)
+- Font for Headings: Jersey 10, https://fonts.google.com/specimen/Jersey+10
+- Font for Paragraphs: Montserrat https://fonts.google.com/specimen/Montserrat
+- Background Color: #637463
+- Font Color: #f1fef5
+- Contrast Ratio: 4.8
+- Include additional colors such as foreground, or different colors for Headings #2b342b(1-6), Paragraphs, Anchors/Links, etc.
+- Paragraph Font Size 16 rem
 - Header Font Size (include values for h1-h6, add more font sizes for different sections of your webpage (such as navigation, footer, article, etc.))
 
 ## CSS Ruleset 

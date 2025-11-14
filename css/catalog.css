@@ -3,7 +3,7 @@ table, td {
             background-color: #637463;
             color: white;
             border: solid 1px black;
-            font-family: "Monserrat", sans-serif;
+            font-family: "Montserrat", sans-serif;
         }
         div {
             display: inline-block;
@@ -21,3 +21,4 @@ th img {
     }
 
 }
+/* This css page helps make the catalog html reflexive with mobile screens as well as styles the html to aline with the rest of the webiste */

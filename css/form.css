@@ -1,11 +1,11 @@
 /* Form layout */
-
+/* Elizanna: added styles and reflexive properties to the payment html to make it flow better with the rest of the website */
 form#Customerinfo {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
    background-color: #637463;
     display: block;
-    width: 100%;
+    width: 95%;
     margin: .2rem auto;
     padding:.5rem;
     border-radius: 10px;
@@ -39,4 +39,12 @@ div.buttons {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     justify-content:center;
+}
+
+@media only screen and (max-width: 768px) {
+
+    form#Customerinfo {
+        margin:0px auto;
+    }
+
 }
