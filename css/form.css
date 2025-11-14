@@ -6,7 +6,7 @@ form#Customerinfo {
    background-color: #637463;
     display: block;
     width: 100%;
-    margin: .2rem;
+    margin: .2rem auto;
     padding:.5rem;
     border-radius: 10px;
     
@@ -17,13 +17,26 @@ form#Customerinfo > fieldset {
     
 }
 form#Customerinfo > fieldset > legend {
-    background-color: darkred;
+    background-color: #2b342b;
     
 }
 
 div.formRow {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
+    margin-bottom: 20px;
     
-    
+}
+
+
+div.buttons {
+    border: white solid 1px;
+    margin: .2rem auto;
+    padding:.5rem;
+
+    display:-webkit-flex;
+    display:flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content:center;
 }

@@ -16,6 +16,10 @@ div.notpopular {
 
 /*Video Game of The Week Section*/
 
+section {
+    background: linear-gradient(180deg, #384238 2%, #637463 25%);
+}
+
 /* * vgow class (stands for - you guessed it - Video Game of the Week. Same with iow (or Item of the Week)*/
 
 section.vgow {
@@ -38,7 +42,6 @@ section h1 {
     font-size:clamp(1.2rem, 2.5vw, 2.5rem);
     font-style:italic;
     text-decoration:underline dashed;
-    background: linear-gradient(180deg, #384238, #637463);
     border-radius:15px;
 }
 
@@ -111,29 +114,11 @@ div.img {
     justify-content:center;
 }
 
-div.img > img#silent {
-    width: auto;
-    height: 18.75rem;
-    
-    
-}
-div.img > img#ghost {
-    width: auto;
-    height: 18.75rem;
-    
-}
+/*! ELABORATE ON THE CHANGE YOU (Lukas) MADE BELOW*/
 
-div.img > img#little {
-width: auto;
-height: 18.75rem;
-
-}
-
-div.img > img#cod {
+div.img > img {
     width: auto;
-    height: 18.75rem;
-    
-}
+    height: 18.75rem; }
     
 
 /*Popular Items Marquee*/
@@ -159,6 +144,10 @@ marquee div.item {
     text-align:center;
 }
 
+marquee > div.item > h1 {
+    background:transparent;
+}
+
 marquee div.item:first-of-type h1{
     width:100%;
 }
@@ -181,9 +170,9 @@ dd {display:flex; display:-webkit-flex; flex: 1 2 200px; -webkit-flex: 1 2 200px
     section div.col-1 {flex: 1 2 200px;}
     section div.col-2 {flex: 1 2 400px;}
 
-    div.img > img#ghost {
-        
-    }
+    /*div.img > img {
+         
+    }*/
 }
 
 

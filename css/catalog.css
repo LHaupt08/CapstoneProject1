@@ -7,8 +7,17 @@ table, td {
         }
         div {
             display: inline-block;
-            margin-right: 5%;
-            margin-left: 5%;
-            margin-top: 5%;
-            margin-bottom: 5%;
+            margin: 5%;
         }
+
+th img {
+    height: 6.25rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+    div {
+        margin: 5% auto;
+    }
+
+}
