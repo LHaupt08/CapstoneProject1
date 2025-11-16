@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*Basic Webpage Setup*/
+/*Basic Webpage Setup*/ /*Header worked on by Lukas*/
 
 html {
     background-color: #202722;
@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, li, dd, form {
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 p, dd.lower{
@@ -156,20 +156,40 @@ footer {
 
 
 
-    div.navicon:hover~ul.main, nav.navhead ul.main:hover {
+    div.navicon:hover~ul.main, nav.horizontal ul:hover{
         display:flex;
         display:-webkit-flex;
+    }
+
+    /*Figure out what is causing the lis to be so small in mobile*/
+
+    ul.main {
         flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
         background-color:  #637463;
+        border-right:black solid 5px;
         position:fixed;
 
-        height:95%;
+        height:100%;
         bottom:0px;
     }
 
     ul.main li {
         flex-flow: row nowrap;
         -webkit-flex-flow: row nowrap;
+        width:100%;
+
+        border-bottom: #384238 solid 3px;
+    }
+
+    ul.main li a {
+        flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+    }
+
+    nav.horizontal ul.main li a::after, nav.horizontal ul.main li a:hover::after {
+        content:none;
+        margin-top:0px;
     }
 
 }

@@ -33,9 +33,9 @@ Dominic: Picking out items for catalogue, Catalogue, Footer
 - Background Color: #637463
 - Font Color: #f1fef5
 - Contrast Ratio: 4.8
-- Include additional colors such as foreground, or different colors for Headings #2b342b(1-6), Paragraphs, Anchors/Links, etc.
-- Paragraph Font Size 16 rem
-- Header Font Size (include values for h1-h6, add more font sizes for different sections of your webpage (such as navigation, footer, article, etc.))
+- Additional Colors: #2b342b(1-6)
+- Paragraph Font Size: 1 rem
+- Header Font Size 
 
 ## CSS Ruleset 
 
