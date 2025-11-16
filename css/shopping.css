@@ -39,13 +39,15 @@ section.vgow {
 
 section h1 {
     text-indent: 10px;
-    font-size:clamp(1.2rem, 2.5vw, 2.5rem);
+    font-size:clamp(1.8rem, 2.5vw, 2.5rem);
     font-style:italic;
     text-decoration:underline dashed;
     border-radius:15px;
 }
 
 /*Sections of Video Game of the Week Box/Item of the Week Box*/
+
+/*Lukas worked on this part of the section with some help from Elizanna with description/music file*/
 
 section.vgow div[class^="col-"] {
     display:flex;
@@ -105,8 +107,8 @@ section.recents {
 div.imgbox {
     display: flex;
     display:-webkit-flex;
-    flex-flow: row nowrap;
-    -webkit-flex-flow:row nowrap;
+    flex-flow: row wrap;
+    -webkit-flex-flow:row wrap;
     width:100%;
 }
 
@@ -136,7 +138,7 @@ section.popular marquee{
     background:linear-gradient(180deg,black, #637463 4%);
     border-radius:20px;
 }
-/* lines 136-155 are from Lukas editing and adding flexes to the Marquee */
+
 marquee div.item {
     display:flex;
     display:-webkit-flex;
@@ -161,8 +163,13 @@ marquee img{
 dt {flex: 1 2 200px; -webkit-flex: 1 2 180px;}
 dd {display:flex; display:-webkit-flex; flex: 1 2 200px; -webkit-flex: 1 2 200px; justify-content:center; align-items:center;}
 
+/*Footer*/
+footer {
+    width: 100%;
+}
+
 /* For Screens 0 to 480px */
-/* This section was made by Lukas and Elizanna to get the index to be responsive to mobile screens */
+/* This section was made by all members to get the index to be responsive to mobile screens */
 @media only screen and (max-width: 768px) {
 
     div.notpopular {
@@ -172,7 +179,9 @@ dd {display:flex; display:-webkit-flex; flex: 1 2 200px; -webkit-flex: 1 2 200px
      section.vgow {
         flex-flow: column nowrap;
         -webkit-flex-flow: column nowrap;
-        
+        margin:auto;
+        padding:none;
+        /*Fix Large gap, caused by padding???*/
     }
 
     section div.col-1 {flex: 1 2 200px;}
@@ -190,11 +199,4 @@ dd {display:flex; display:-webkit-flex; flex: 1 2 200px; -webkit-flex: 1 2 200px
     section.popular {
         display:none;
     }
-}
-
-
-
-/*Footer*/
-footer {
-    width: 100%;
 }

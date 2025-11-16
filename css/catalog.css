@@ -5,9 +5,9 @@ table, td {
             border: solid 1px black;
             font-family: "Montserrat", sans-serif;
         }
-        div {
+        div.catalogue {
             display: inline-block;
-            margin: 5%;
+            margin: 4%;
         }
 
 th img {
@@ -17,7 +17,7 @@ th img {
 @media only screen and (max-width: 480px) {
 
     div {
-        margin: 5% auto;
+        margin: auto 5%;
     }
 
 }
