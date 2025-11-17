@@ -71,8 +71,6 @@ div.logo {
 }
 
 ul.main li {
-    flex: 1 2 15vw;
-    -webkit-flex: 1 2 15vw;
     width: 15%;
     text-align:center;
 
@@ -82,6 +80,11 @@ ul.main li {
     align-items:center;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
+}
+
+ul.submenu {
+    display:block;
+    width: 100%;
 }
 
 nav.horizontal ul.main li input, nav.horizontal2 ul.main li input {
