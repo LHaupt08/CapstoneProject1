@@ -57,42 +57,42 @@
 
 <section>
 <!--This section contains all of the info for the form that a customer would put personal info, payment info, and product info. Elizanna made this html-->
-    <form id="Customerinfo" method="post">
-        <fieldset id="custInfo">
+    <form class="Customerinfo" method="post">
+        <fieldset class="custInfo">
             <legend>Customer Information</legend>
             <div class="formRow">
                 <label for="firstname">First name*</label>
-                <input name="custFirst" id="firstname"
+                <input name="custFirst" class="firstname"
                 type="text" placeholder="first name" required/>
             </div>
             <div class="formRow">
                     <label for="lastname">Last name*</label>
-                    <input name="custLast" id="lastname"
+                    <input name="custLast" class="lastname"
                     type="text" placeholder="last name" required/>
             </div>
             <div class="formRow">
                 <label for="email">E-mail*</label>
-                <input name="custMail" id="mail" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
+                <input name="custMail" class="mail" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
             </div>
             <div class="formRow">
                 <label for="phone">Phone</label>
-                <input name="custPhone" id="phone" type="tel" placeholder="(###) ###-####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+                <input name="custPhone" class="phone" type="tel" placeholder="(###) ###-####" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
             </div>
             <div class="formRow">
                 <label for="address">Street Address*</label>
-                <input name="custAddress" id="address" type="text" required/>
+                <input name="custAddress" class="address" type="text" required/>
             </div>
             <div class="formRow">
                 <label for="state">State*</label>
-                <input name="custState" id="state" type="text" list="stateType" required/>
-                <datalist id="stateType">
+                <input name="custState" class="state" type="text" list="stateType" required/>
+                <datalist class="stateType">
                 <option value="MO"></option>
                 <option value="WA"></option>
                 <option value="OR"></option>
                 <option value="CA"></option>
                 <option value="NV"></option>
                 <option value="AZ"></option>
-                <option value="ID"></option>
+                <option value="class"></option>
                 <option value="MT"></option>
                 <option value="WY"></option>
                 <option value="CO"></option>
@@ -142,19 +142,19 @@
             </div>
             <div class="formRow">
                 <label for="city">City*</label>
-                <input name="custCity" id="city" type="text" required/>
+                <input name="custCity" class="city" type="text" required/>
             </div>
             <div class="formRow">
                 <label for="zip">Zip</label>
-                <input name="custZip" id="zip" type="number" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
+                <input name="custZip" class="zip" type="number" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
             </div>
         </fieldset>
 
-        <fieldset id="itemInfo">
+        <fieldset class="itemInfo">
             <legend>Product Information</legend>
             <div class="formRow">
                 <label for="item">Item</label>
-                <select name="itemType" id="item">
+                <select name="itemType" class="item">
                 <option value="Game">Game</option>
                 <option value="Console">Console</option>
                 <option value="Collectable">Collectable</option>
@@ -163,12 +163,12 @@
             <div class="formRow">
                 <label for="quantity">Quantity</label>
                 1
-                <input name="itemQuan" id="quantity" type="range" value="10" step="1" min="1" max="10"/>
+                <input name="itemQuan" class="quantity" type="range" value="10" step="1" min="1" max="10"/>
                 10
             </div>
             <div class="formRow">
                 <label for="delivery">Delivery Preference</label>
-                <select name="DeliveryType" id="delivery">
+                <select name="DeliveryType" class="delivery">
                 <option value="Porch">Porch</option>
                 <option value="Mail Box">Mail Box</option>
                 <option value="Pickup">Pick-up at Store</option>
@@ -180,27 +180,27 @@
                 <legend>Payment Information</legend>
             <div class="formRow">
                 <label for="name">Card Holder's Name</label>
-                <input name="cardName" id="name" type="text" placeholder="Jane Doe" required/>
+                <input name="cardName" class="name" type="text" placeholder="Jane Doe" required/>
             </div>
             <div class="formRow">
                 <label for="card">Card Number</label>
-                <input name="cardNum" id="number" type="number" placeholder="1234 1234 1234 1234" maxlength="16" required />
+                <input name="cardNum" class="number" type="number" placeholder="1234 1234 1234 1234" maxlength="16" required />
             </div>
             <div class="formRow">
                 <label for="cvv">CVV</label>
-                <input name="cvvNum" id="code" type="number" placeholder="123" maxlength="3" required/>
+                <input name="cvvNum" class="code" type="number" placeholder="123" maxlength="3" required/>
             </div>
             <div class="formRow">
                 <label for="exp">Expiration Date</label>
-                <input name="expDate" id="expdate" type="date" required/>
+                <input name="expDate" class="expdate" type="date" required/>
             </div>
             <div class="formRow">
                 <label for="address">Street Address</label>
-                <input name="cardAddress" id="address" type="text" required/>
+                <input name="cardAddress" class="address" type="text" required/>
             </div>
             <div class="formRow">
                 <label for="zip">Zip</label>
-                <input name="cardZip" id="zip" type="number" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
+                <input name="cardZip" class="zip" type="number" placeholder="##### (-####)" pattern="^\d{5}(-\d{4})?$" required/>
             </div>
             </fieldset>
 
