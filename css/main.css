@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, li, dd, form {
     font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
-p, dd.lower{
+p{
     font-family: "Monserrat", sans-serif;
     word-spacing: .1rem;
     line-height: 1.2rem;
@@ -70,7 +70,7 @@ div.logo {
     -webkit-flex:1 2 10vw;
 }
 
-nav.horizontal ul.main li, nav.horizontal2 ul.main li {
+ul.main li {
     flex: 1 2 15vw;
     -webkit-flex: 1 2 15vw;
     width: 15%;
@@ -160,8 +160,6 @@ footer {
         display:flex;
         display:-webkit-flex;
     }
-
-    /*Figure out what is causing the lis to be so small in mobile*/
 
     ul.main {
         flex-flow: column nowrap;

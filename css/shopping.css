@@ -1,3 +1,4 @@
+/*Lukas worked on this part of the section with some help from Elizanna with description/music file*/
 
 div.dontbreakheader {
     display:flex;
@@ -20,7 +21,7 @@ section {
     background: linear-gradient(180deg, #384238 2%, #637463 25%);
 }
 
-/* * vgow class (stands for - you guessed it - Video Game of the Week. Same with iow (or Item of the Week)*/
+/* * vgow class (stands for - you guessed it - Video Game of the Week.*/
 
 section.vgow {
     display:flex;
@@ -46,8 +47,6 @@ section h1 {
 }
 
 /*Sections of Video Game of the Week Box/Item of the Week Box*/
-
-/*Lukas worked on this part of the section with some help from Elizanna with description/music file*/
 
 section.vgow div[class^="col-"] {
     display:flex;
