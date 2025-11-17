@@ -15,10 +15,19 @@ th img {
     height: 6.25rem;
 }
 
+th a {
+    background-color: white;
+    text-decoration: none;
+}
+
+th a:hover {
+    background-color: lightgray;
+}
+
 @media only screen and (max-width: 480px) {
 
-    div {
-        margin: auto 5%;
+    div.catalogue{
+        margin: 5%;
     }
 
 }
