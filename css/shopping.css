@@ -17,7 +17,7 @@ div.notpopular {
 
 /*Video Game of The Week Section*/
 
-section {
+section.weekbox {
     background: linear-gradient(180deg, #384238 2%, #637463 25%);
     border-radius: 10px;
 }
@@ -127,7 +127,7 @@ section.popular {
     width:30%;
     margin-left: 20px;
     border-radius:20px;
-    background-color:#202722;
+    background:#202722;
 }
 
 section.popular marquee{

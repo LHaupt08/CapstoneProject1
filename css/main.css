@@ -18,23 +18,23 @@ body {
     5%{background:linear-gradient(90deg, #8b6d6d 10%, #8b7f6d 30%, #8b896d 60%);}
     10%{background:linear-gradient(90deg, #8b7f6d 20%, #8b896d 50%, #728b6d 80%);}
     15%{background:linear-gradient(90deg, #8b7f6d 10%, #8b896d 30%, #728b6d 60%);}
-    20%{}
-    25%{}
-    30%{}
-    35%{}
-    40%{}
-    45%{}
-    50%{}
-    55%{}
-    60%{}
-    65%{}
-    70%{}
-    75%{}
-    80%{}
-    85%{}
-    90%{}
-    95%{}
-    100%{}
+    20%{background:linear-gradient(90deg, #728b6d 20%, #6d8b76 50%, #6d8b88 80%);}
+    25%{background:linear-gradient(90deg, #728b6d 10%, #6d8b76 30%, #6d8b88 60%);}
+    30%{background:linear-gradient(90deg, #6d8b76 20%, #6d8b88 50%, #6d7b8b 80%);}
+    35%{background:linear-gradient(90deg, #6d8b76 10%, #6d8b88 30%, #6d7b8b 60%);}
+    40%{background:linear-gradient(90deg, #6d8b88 20%, #6d8b88 50%, #6d6d8b 80%);}
+    45%{background:linear-gradient(90deg, #6d8b88 10%, #6d7b8b 30%, #6d6d8b 60%);}
+    50%{background:linear-gradient(90deg, #6d8b88 20%, #6d6d8b 50%, #796d8b 80%);}
+    55%{background:linear-gradient(90deg, #6d8b88 10%, #6d6d8b 30%, #796d8b 60%);}
+    60%{background:linear-gradient(90deg, #6d6d8b 20%, #796d8b 50%, #866d8b 80%);}
+    65%{background:linear-gradient(90deg, #6d6d8b 10%, #796d8b 30%, #866d8b 60%);}
+    70%{background:linear-gradient(90deg, #796d8b 20%, #866d8b 50%, #8b6d7b 80%);}
+    75%{background:linear-gradient(90deg, #796d8b 10%, #866d8b 30%, #8b6d7b 60%);}
+    80%{background:linear-gradient(90deg, #866d8b 20%, #8b6d7b 50%, #8b6d6f 80%);}
+    85%{background:linear-gradient(90deg, #8b6d7b 10%, #8b6d7b 30%, #8b6d6f 60%);}
+    90%{background:linear-gradient(90deg, #8b6d7b 20%, #8b6d6f 50%, #8b6d6d 80%);}
+    95%{background:linear-gradient(90deg, #8b6d7b 10%, #8b6d6f 30%, #8b6d6d 60%);}
+    100%{background:linear-gradient(90deg, #8b6d6f  20%, #8b6d6d 50%, #8b7f6d 80%);}
 }
 
 header {
@@ -46,7 +46,8 @@ header {
 
     border-bottom: black solid 2px;
     z-index: 2;
-    background:linear-gradient(90deg, #8b896d 20%, #728b6d 50%, #6d8b76 80%);
+
+    animation: toqRAINBOW 3s ease-in-out infinite;
 }
 
 
@@ -217,6 +218,7 @@ footer {
         position:fixed;
 
         height:100%;
+        width: 185px;
         bottom:0px;
     }
 
@@ -241,7 +243,7 @@ footer {
 
     ul.submenu {
         top:auto;
-        left: 180px;
+        left: 184px;
         min-width:25%;
     }
 
