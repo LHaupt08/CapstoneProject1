@@ -18,6 +18,7 @@ th img {
 th a {
     background-color: white;
     text-decoration: none;
+    outline: 1px solid black;
 }
 
 th a:hover {

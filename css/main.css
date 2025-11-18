@@ -13,6 +13,30 @@ body {
     margin: 0px auto;
 }
 
+@keyframes toqRAINBOW {
+    0%{background:linear-gradient(90deg, #8b6d6d 20%, #8b7f6d 50%, #8b896d 80%);}
+    5%{background:linear-gradient(90deg, #8b6d6d 10%, #8b7f6d 30%, #8b896d 60%);}
+    10%{background:linear-gradient(90deg, #8b7f6d 20%, #8b896d 50%, #728b6d 80%);}
+    15%{background:linear-gradient(90deg, #8b7f6d 10%, #8b896d 30%, #728b6d 60%);}
+    20%{background:linear-gradient(90deg, #728b6d 20%, #6d8b76 50%, #6d8b88 80%);}
+    25%{background:linear-gradient(90deg, #728b6d 10%, #6d8b76 30%, #6d8b88 60%);}
+    30%{background:linear-gradient(90deg, #6d8b76 20%, #6d8b88 50%, #6d7b8b 80%);}
+    35%{background:linear-gradient(90deg, #6d8b76 10%, #6d8b88 30%, #6d7b8b 60%);}
+    40%{background:linear-gradient(90deg, #6d8b88 20%, #6d8b88 50%, #6d6d8b 80%);}
+    45%{background:linear-gradient(90deg, #6d8b88 10%, #6d7b8b 30%, #6d6d8b 60%);}
+    50%{background:linear-gradient(90deg, #6d8b88 20%, #6d6d8b 50%, #796d8b 80%);}
+    55%{background:linear-gradient(90deg, #6d8b88 10%, #6d6d8b 30%, #796d8b 60%);}
+    60%{background:linear-gradient(90deg, #6d6d8b 20%, #796d8b 50%, #866d8b 80%);}
+    65%{background:linear-gradient(90deg, #6d6d8b 10%, #796d8b 30%, #866d8b 60%);}
+    70%{background:linear-gradient(90deg, #796d8b 20%, #866d8b 50%, #8b6d7b 80%);}
+    75%{background:linear-gradient(90deg, #796d8b 10%, #866d8b 30%, #8b6d7b 60%);}
+    80%{background:linear-gradient(90deg, #866d8b 20%, #8b6d7b 50%, #8b6d6f 80%);}
+    85%{background:linear-gradient(90deg, #8b6d7b 10%, #8b6d7b 30%, #8b6d6f 60%);}
+    90%{background:linear-gradient(90deg, #8b6d7b 20%, #8b6d6f 50%, #8b6d6d 80%);}
+    95%{background:linear-gradient(90deg, #8b6d7b 10%, #8b6d6f 30%, #8b6d6d 60%);}
+    100%{background:linear-gradient(90deg, #8b6d6f  20%, #8b6d6d 50%, #8b7f6d 80%);}
+}
+
 header {
     width: 100%;
     background-color: #637463;
@@ -22,6 +46,8 @@ header {
 
     border-bottom: black solid 2px;
     z-index: 2;
+
+    animation: toqRAINBOW 3s ease-in-out infinite;
 }
 
 
@@ -65,6 +91,16 @@ ul.main{
     -webkit-flex: 2 1 86vw;
 }
 
+ul.submenu {
+    display:none;
+    position:fixed;
+}
+
+li:hover>a+ul.submenu, ul.submenu:hover {
+    display:block;
+    background-color:black;
+}
+
 div.logo {
     flex: 1 2 10vw;
     -webkit-flex:1 2 10vw;
@@ -74,6 +110,7 @@ ul.main li {
     flex: 1 2 15vw;
     -webkit-flex: 1 2 15vw;
     width: 15%;
+    height:42px;
     text-align:center;
 
     display:flex;
@@ -84,10 +121,21 @@ ul.main li {
     -webkit-flex-flow: row wrap;
 }
 
+ul.submenu {
+    top:43px;
+    padding:10px;
+    width:auto;
+}
+
+ul.submenu li {
+    white-space:nowrap;
+    width:100%;
+}
+
 nav.horizontal ul.main li input, nav.horizontal2 ul.main li input {
-    flex: 1 1 200px;
-    -webkit-flex: 1 1 200px;
-    margin: 0px 8px;
+    flex: 0 1 100px;
+    -webkit-flex: 0 1 100px;
+    
 }
 
 nav.horizontal ul.main li a, nav.horizontal2 ul.main li a {
@@ -97,6 +145,7 @@ nav.horizontal ul.main li a, nav.horizontal2 ul.main li a {
     align-items:center;
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
+    height:100%;
 }
 
 ul.main li a:link, ul.main li a:visited {
@@ -112,7 +161,7 @@ nav.horizontal ul.main li a:hover::after, nav.horizontal2 ul.main li a:hover::af
     content:' \25BE';
 }
 
-nav.horizontal2 ul.main li:first-of-type > a:after {
+nav.horizontal2 ul.main li:first-of-type > a::after, nav.horizontal ul.main li:nth-of-type(5) > a::after, nav.horizontal li ul.submenu li > a::after, nav.horizontal li ul.submenu li > a:hover::after{
     content:none;
 }
 
@@ -169,15 +218,21 @@ footer {
         position:fixed;
 
         height:100%;
+        width: 185px;
         bottom:0px;
     }
 
     ul.main li {
-        flex-flow: row nowrap;
-        -webkit-flex-flow: row nowrap;
+        flex-flow: column nowrap;
+        -webkit-flex-flow: column nowrap;
         width:100%;
 
         border-bottom: #384238 solid 3px;
+    }
+
+    ul.main li:last-of-type {
+        flex: 0 1 50px;
+        -webkit-flex: 0 1 50px;
     }
 
     ul.main li a {
@@ -185,9 +240,20 @@ footer {
         -webkit-flex-flow: row nowrap;
     }
 
-    nav.horizontal ul.main li a::after, nav.horizontal ul.main li a:hover::after {
-        content:none;
-        margin-top:0px;
+
+    ul.submenu {
+        top:auto;
+        left: 184px;
+        min-width:25%;
+    }
+
+    ul.main > li:first-of-type > ul.submenu {
+        top:0px;
+    }
+
+    li:hover>a+ul.submenu, ul.submenu:hover {
+        display:block;
+        background-color:black;
     }
 
 }

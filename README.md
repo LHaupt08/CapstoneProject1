@@ -40,7 +40,9 @@ Dominic: Picking out items for catalogue, Catalogue, Footer
 
 ### Header Classes
 
-- .main (ul): Original purpose was to state a difference between the main ul and submenu uls, but we were not able to get that far. In its current state, it mainly sets how the lis are laid out, defines the ul's flex, and dissapears at a certain screen size, only to appear when hovering over the navicon (has a background color of #637463, and a border of black with 5px)
+- .main (ul): This ul is now achieving it's full purpose! Mainly, sets how the lis are laid out, defines the ul's flex, and dissapears at a certain screen size, only to appear when hovering over the navicon (has a background color of #637463, and a border of black with 5px)
+
+-.submenu (ul): The SEVERAL children to ul.main. Almost every li in the header contains this (represented by the triangle to the right of the text). When you hover over said li, it will apprear, using a fixed position from the top, of 43px (So it can appear at each dropdown with it's contents). It also has a padding of 10px, and an automatic width, shifting to what ever size it need to be depending on how much text it has. On smaller screens, it is now fixed to the left by 180px (with the exception of the first dropdown, being also fixed to the top by 0px, so it does not clip off screen).
 
 - .horizontal, .horizontal2 (nav): These two are basically the same thing, the copy existing to make sure the header (which has a fixed position) does not cover up other things on screen. Otherwise, it just uses the same display and flex flow as ul.main, due to the ul not being the only item in the header (note: horizontal2 dissapears on mobile layouts, as the header has a relative position there.)
 
@@ -52,7 +54,7 @@ Dominic: Picking out items for catalogue, Catalogue, Footer
 
 - .notpopular (div) [I don't know why I named it this]: The area taking up 75% of the index, and holds the sections. Displays them in a column. On smaller screens, it has a width of 100%.
 
-- .vgow (section): holds the content for the Video Game of the Week box. It has a linear gradient of: ((180deg, #384238 2%, #637463 25%), but all sections have that). It displays its content as a row (the header, image, and video being displayed on one side, and the description and audio on the other side.). Other smaller things of note are it's width of 100% (of div.notpopular), margin of .2rem, padding of .5rem, and finally a border radius of 10px.
+- .weekbox (section): General class for _____ of the week content. It has a linear gradient of: ((180deg, #384238 2%, #637463 25%), but all sections have that). It displays its content as a row (the header, image, and video being displayed on one side, and the description and audio on the other side.). Other smaller things of note are it's width of 100% (of div.notpopular), margin of .2rem, padding of .5rem, and finally a border radius of 10px.
 
 - ."col-" (div): Makes sure both "col-" divs are set as columns.
 

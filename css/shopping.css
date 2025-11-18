@@ -17,14 +17,12 @@ div.notpopular {
 
 /*Video Game of The Week Section*/
 
-section {
+section.weekbox {
     background: linear-gradient(180deg, #384238 2%, #637463 25%);
     border-radius: 10px;
 }
 
-/* * vgow class (stands for - you guessed it - Video Game of the Week.*/
-
-section.vgow {
+section.weekbox {
     display:flex;
     display:-webkit-flex;
     flex-flow: row nowrap;
@@ -45,7 +43,7 @@ section h1 {
 
 /*Sections of Video Game of the Week Box/Item of the Week Box*/
 
-section.vgow div[class^="col-"] {
+section.weekbox div[class^="col-"] {
     display:flex;
     display:-webkit-flex;
 
@@ -56,7 +54,7 @@ section.vgow div[class^="col-"] {
 section div.col-1 {flex: 1 2 900px;}
 section div.col-2 {flex: 1 2 400px;}
 
-section.vgow div.gameMedia {
+section.weekbox div.gameMedia {
     height:100%;
     display:flex;
     display:-webkit-flex;
@@ -68,12 +66,16 @@ section.vgow div.gameMedia {
     padding: 5px;
 }
 
-section.vgow img {
+section.weekbox img {
     width: 32.5%;
 }
 
-section.vgow video {
+section.weekbox video, iframe{
     width: 60%;
+}
+
+iframe {
+    height:100%;
 }
 
 audio {
@@ -125,7 +127,7 @@ section.popular {
     width:30%;
     margin-left: 20px;
     border-radius:20px;
-    background-color:#202722;
+    background:#202722;
 }
 
 section.popular marquee{
@@ -172,7 +174,7 @@ footer {
         width: 100%;
     }
 
-     section.vgow {
+     section.weekbox {
         flex-flow: column nowrap;
         -webkit-flex-flow: column nowrap;
         margin:auto;
