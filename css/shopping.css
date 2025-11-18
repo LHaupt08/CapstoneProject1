@@ -196,4 +196,8 @@ footer {
     section.popular {
         display:none;
     }
+
+    footer {
+        margin-top:5px;
+    }
 }
